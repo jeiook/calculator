@@ -1,3 +1,12 @@
 * {
 	box-sizing: border-box;
 }
+
+.current-calc {
+	font-family: 'Roboto', sans-serif;
+}
+
+.result {
+	font-weight: bold;
+	margin: hidden;
+}
