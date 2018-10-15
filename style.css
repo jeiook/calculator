@@ -1,12 +1,60 @@
 * {
 	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
 }
 
 .current-calc {
 	font-family: 'Roboto', sans-serif;
 }
 
+.calc-container {
+	border: 1px solid black;
+	width: 320px;
+	height: auto;
+}
+
 .result {
+	font-size: 50px;
+	font-family: Arial;
+	text-align: right;
+	width: 100%;
+	height: 58px;
+	border: 1px solid red;
+	bottom: 0;
+}
+
+.button-container-standard > div {
+	width: 100%;
+	height: 50px;
+}
+
+.button-container-standard > div > div {
+	width: 25%;
+	height: 100%;
+	text-align: center;
+	font-size: 20px;
+	border: 1px solid lightgrey;
+	padding: 10px;;
+}
+
+.button-container-standard > div > div:not(.basic-op):hover {
+	background: grey;
+}
+
+.temp-grey{
+	background: grey;
+}
+
+.basic-op:hover {
+	background: lightblue;
+}
+
+.digit {
 	font-weight: bold;
-	margin: hidden;
 }
