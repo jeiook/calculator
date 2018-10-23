@@ -9,6 +9,12 @@
 	justify-content: flex-start;
 }
 
+.flex-container.display {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
 .current-calc {
 	font-family: 'Roboto', sans-serif;
 }
@@ -19,22 +25,38 @@
 	height: auto;
 }
 
-.result {
+.display {
 	font-size: 50px;
 	font-family: Arial;
 	text-align: right;
 	width: 100%;
-	height: 58px;
+	height: 150px;
+	padding: 5%;
 	border: 1px solid red;
 	bottom: 0;
 }
 
-.button-container-standard > div {
+.current-number {
+	height: 50%;
+	bottom: 0;
+}
+
+.calculation {
+	font-size: 20px;
+	font-family: Arial;
+	color: grey;
+	text-align: right;
+	width: 100%;
+	height: 50%;
+	top: 0;
+}
+
+.row {
 	width: 100%;
 	height: 50px;
 }
 
-.button-container-standard > div > div {
+.buttons {
 	width: 25%;
 	height: 100%;
 	text-align: center;
@@ -43,7 +65,11 @@
 	padding: 10px;;
 }
 
-.button-container-standard > div > div:not(.basic-op):hover {
+.buttons:not(.digits) {
+	background: rgb(242, 242, 242);
+}
+
+.buttons:not(.basic-op):hover {
 	background: grey;
 }
 
@@ -55,6 +81,6 @@
 	background: lightblue;
 }
 
-.digit {
+.digits {
 	font-weight: bold;
 }
