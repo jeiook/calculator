@@ -1,8 +1,6 @@
-//refer to: https://reactjs.org/
-
 import React from 'react';
 import './App.css';
-import * as Text from './modules/text'
+import * as Calculate from './modules/calculate'
 
 class Screen extends React.Component {
     constructor(props) {
@@ -12,7 +10,7 @@ class Screen extends React.Component {
     }
     render() {
         return (
-            <div class="screen-container">
+            <div className="screen-container">
                 <input 
                     id="screen" 
                     onChange={this.handletextChange}
@@ -21,23 +19,16 @@ class Screen extends React.Component {
                 <p>
                     {this.state.answer}
                 </p>
+                <p>
+                    driver result: {Calculate.driver()}
+                </p>
             </div>
         );
     }
 
     handletextChange(e){
         this.setState({ text: e.target.value });
-        this.setState({ answer: this.calculate(e.target.value) });
-    }
-
-    calculate(e) {
-        if (e === "") {
-            return "";
-        }
-        if (!Text.isvalid(e)) {
-            return "invalid input";
-        }
-        return e;
+        this.setState({ answer: Calculate.evaluate(e.target.value) });
     }
 }
 
